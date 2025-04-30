@@ -3,7 +3,7 @@ class REAL:
         self.x = x
         self.set_a = set_a
 
-    def toString(self, n):
+    def asString(self, n):
         ret = "."
         y = self.x
 
@@ -23,23 +23,3 @@ class REAL:
 
         return ret
 
-# Menge A für 1/3. Bestimme je, ob n in Menge A enthalten ist.
-def onethird(n):
-    if n % 2 == 1:
-        return True
-    else:
-        return False
-
-# Menge A für 1/5
-def onefifth(n):
-    if n % 4 in [2, 3]:
-        return True
-    else:
-        return False
-
-if (__name__ == "__main__"):
-    x = REAL(0, onethird)
-    print(x.toString(10))
-
-    x = REAL(0, onefifth)
-    print(x.toString(10))
